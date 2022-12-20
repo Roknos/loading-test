@@ -1,0 +1,53 @@
+body{
+    background-color: #272822;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes left {
+    0%{opacity: 0.3;
+       margin-left: -220px;    
+    }
+    80%{opacity: 1;}
+    100%{margin-left: 0px;}
+}
+
+@keyframes right {
+    0%{opacity: 0.3;
+       margin-right: -220px;    
+    }
+    80%{opacity: 1;}
+    100%{margin-right: 0px;}
+}
+
+@keyframes finish {
+    0%{}
+    50%{opacity: 0.1;}
+    100%{opacity: 0.4;margin-top: -820px;}
+    
+}
+
+#container{
+    height: 500px;
+    order: 1;
+    width: 1050px;
+    animation: finish 500ms 4000ms;
+    animation-fill-mode: forwards;
+}
+
+#left {float: left;
+    width: 525px;
+    order: 1;
+    animation: left 2000ms;
+}
+
+#right{float: right;
+    width: 525px;
+    order: 2;
+    animation: right 2000ms;
+}
